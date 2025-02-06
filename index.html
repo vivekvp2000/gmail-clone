@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<style>
+    .header-inner {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-left {
+        min-width: 238px;
+        padding-right: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-left button {
+        padding: 12px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .header-left button i {
+        font-size: 20px;
+    }
+
+    .header-center-btn-container button:last-child i {
+        font-size: 24px;
+    }
+
+    .header-center {
+        grid-template-columns: 1fr 0.2fr;
+    }
+
+    .dot-menu-btn {
+        max-width: 20px;
+        opacity: 0.8;
+    }
+
+    .user-profile {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+
+    }
+</style>
+
+<body>
+
+    <header class="mail-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <button><i class="ri-menu-2-line"></i></button>
+                <div class="mail-logo">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
+                        alt="mail-logo">
+                </div>
+            </div>
+            <div class="header-center grid flex-grow items-center">
+                <div class="header-search-bar">
+                    <div class="header-filter-bar relative">
+                        <div class="search-icon absolute">
+                            <i class="ri-search-line"></i>
+                        </div>
+                        <div class="filter-icon absolute">
+                            <i class="ri-equalizer-line"></i>
+                        </div>
+                        <input type="text" placeholder="Search mail" class="h-100 w-100">
+                    </div>
+                </div>
+                <div class="header-center-right justify-content-end">
+                    <div class="header-center-btn-container flex items-center gap-1">
+                        <button class="btn cursor-pointer"><svg class="t7" xmlns="http://www.w3.org/2000/svg"
+                                width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path
+                                    d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+                                </path>
+                            </svg></button>
+                        <button class="btn cursor-pointer"><i class="ri-settings-2-line"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right flex items-center gap-1">
+                <button class="btn cursor-pointer">
+                    <img src="assets/images/dots-menu.png" alt="" class="dot-menu-btn"></button>
+                <div class="user-profile cursor-pointer">
+                    <img src="https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"
+                        alt="user-profile" class="w-100 h-100 object-fit-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
