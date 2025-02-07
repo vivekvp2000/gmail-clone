@@ -7,62 +7,14 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
-
-<style>
-    .header-inner {
-        padding: 8px;
-        display: flex;
-        align-items: center;
-    }
-
-    .header-left {
-        min-width: 238px;
-        padding-right: 30px;
-        display: flex;
-        align-items: center;
-    }
-
-    .header-left button {
-        padding: 12px;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    .header-left button i {
-        font-size: 20px;
-    }
-
-    .header-center-btn-container button:last-child i {
-        font-size: 24px;
-    }
-
-    .header-center {
-        grid-template-columns: 1fr 0.2fr;
-    }
-
-    .dot-menu-btn {
-        max-width: 20px;
-        opacity: 0.8;
-    }
-
-    .user-profile {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 10px;
-
-    }
-</style>
-
 <body>
 
     <header class="mail-header">
@@ -109,11 +61,1445 @@
             </div>
         </div>
     </header>
+    <main class="mail-main-sec">
+        <div class="mail-main-container h-100 flex">
+            <div class="mail-sidebar flex flex-col">
+                <div class="sidebar-head">
+                    <button class="btn flex compose-btn h-100 items-center cursor-pointer"><i
+                            class="ri-pencil-line"></i>Compose</button>
+                </div>
+                <div class="sidebar-list flex flex-col">
+                    <div class="sidebar-item flex items-center cursor-pointer active">
+                        <div class="side-icon flex"><i class="ri-mail-line"></i></div>
+                        <div class="flex items-center justify-content-between flex-grow">
+                            <a href="#" class="fs-14 sidebar-item-title">Inbox</a>
+                            <div class="mail-count fs-12 fw-700">
+                                2,899
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item flex items-center cursor-pointer">
+                        <div class="side-icon flex"><i class="ri-star-line"></i></div>
+                        <div class="flex items-center justify-content-between flex-grow">
+                            <a href="#" class="fs-14 sidebar-item-title">Starred</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-item flex items-center cursor-pointer">
+                        <div class="side-icon flex"><i class="ri-time-line"></i></div>
+                        <div class="flex items-center justify-content-between flex-grow">
+                            <a href="#" class="fs-14 sidebar-item-title">Snoozed</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-item flex items-center cursor-pointer">
+                        <div class="side-icon flex"><i class="ri-send-plane-2-line"></i></div>
+                        <div class="flex items-center justify-content-between flex-grow">
+                            <a href="#" class="fs-14 sidebar-item-title">Send</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mail-content flex-grow">
+                <div class="mail-card h-100">
+                    <div class="mail-card-header px-3  flex justify-content-between items-center">
+                        <div class="mail-card-header-left flex gap-3 items-center">
+                            <div class="flex fs-5 gap-1 cursor-pointer">
+                                <input type="checkbox" name="mark-all" id="mark-all" class="cursor-pointer">
+                                <i class="ri-arrow-down-s-fill"></i>
+                            </div>
+                            <span class="cursor-pointer"><i class="ri-restart-line fs-6"></i></span>
+                            <span class="cursor-pointer"><i class="ri-more-2-line fs-6"></i></span>
+                        </div>
+                        <div class="mail-card-header-righ flex items-centert">
+                            <div class="pagination-count flex items-center gap-1 fs-12">
+                                <span>1-50</span>of<span>3,202</span>
+                            </div>
+                            <div class="pagination-btns flex fs-12">
+                                <button class="btn px-1"><i class="ri-arrow-left-s-line"></i></button>
+                                <button class="btn px-1"><i class="ri-arrow-right-s-line"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mail-container h-100">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active text-inherit flex gap-2 fs-14" id="home-tab"
+                                    data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true"> <img
+                                        src="./assets/icons/primary.png" alt="">Primary</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link flex text-inherit gap-2 fs-14" id="profile-tab"
+                                    data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false"> <img
+                                        src="./assets/icons/socials.png" alt="">Social</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <table cellpadding="0" class="main-mail-table w-100">
+                                    <tbody>
+                                         <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center read">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="flex items-center">
+                                            <td>
+                                                <div class="flex">
+                                                    <input type="checkbox" name="" id="" class="ms-3 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="star-row cursor-pointer">
+                                                <div class="mx-2"><i class="ri-star-line"></i></div>
+                                            </td>
+                                            <td class="mail-title"><span class="fs-14 fw-700">cbsalerts.sbi</span></td>
+                                            <td class="flex pe-3 mail-message">
+                                                <div class="flex items-center gap-small">
+                                                    <span><b class="fs-14">New device login detected in your Flipkart
+                                                            account</b></span>-
+                                                    <span class="fs-14">Flipkart Account - 192561 is your verification
+                                                        code
+                                                        for secure access sfdsdfdsfdsf</span>
+                                                </div>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="fs-12 fw-700 mail-time flex justify-content-center">2:22 PM
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">.dsfdfsdfdsfsfddsfsdfds..</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/scripts/script.js"></script>
 </body>
 

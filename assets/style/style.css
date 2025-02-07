@@ -4,14 +4,42 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
-  font-family: "Roboto", serif;
+  font-family: "googleSans", serif;
 }
-body{
-  background-color: #F8FAFD;
+:root {
+  --txt-clr: #001d35;
 }
+
+body {
+  background-color: #f8fafd;
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Font Import  */
+@font-face {
+  font-family: googleSans;
+  src: url(/assets/fonts/GoogleSans-Regular.ttf);
+}
+
+/* Font Import  */
 
 /* Utility Css  */
 
+/* Font Css  */
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+
+/* Fw  */
+.fw-700 {
+  font-weight: 700;
+}
 .grid {
   display: grid;
 }
@@ -22,6 +50,9 @@ body{
 .relative {
   position: relative;
 }
+.text-inherit {
+  color: inherit;
+}
 .absolute {
   position: absolute;
 }
@@ -30,6 +61,9 @@ body{
 }
 .justify-content-end {
   justify-content: end;
+}
+.justify-content-between {
+  justify-content: space-between;
 }
 .object-fit-cover {
   object-fit: cover;
@@ -41,6 +75,9 @@ body{
 }
 .flex {
   display: flex;
+}
+.flex-col {
+  flex-direction: column;
 }
 .items-center {
   align-items: center;
@@ -54,10 +91,57 @@ body{
 .gap-1 {
   gap: 0.7rem;
 }
-
+.gap-small {
+  gap: 2px;
+}
 /* Utility Css  */
 /* Header Css  */
 
+.header-inner {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  min-width: 238px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.header-left button {
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header-left button i {
+  font-size: 20px;
+}
+
+.header-center-btn-container button:last-child i {
+  font-size: 24px;
+}
+
+.header-center {
+  grid-template-columns: 1fr 0.2fr;
+}
+
+.dot-menu-btn {
+  max-width: 20px;
+  opacity: 0.8;
+}
+
+.user-profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
 .header-filter-bar {
   height: 48px;
   max-width: 720px;
@@ -85,7 +169,134 @@ body{
   margin-right: 1rem;
 }
 .header-filter-bar i {
-font-size: 20px;
-cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
 }
 /* Header Css  */
+/* Mail Css  */
+.mail-main-sec {
+  height: calc(100vh - 64px);
+}
+
+.mail-sidebar {
+  max-width: 256px;
+  min-width: 256px;
+}
+.sidebar-head {
+  height: 40px;
+  margin: 8px 0 8px 0;
+  padding-left: 8px;
+}
+.compose-btn {
+  background-color: #c2e7ff;
+  border-radius: 16px;
+  color: #001d35;
+  height: 40px;
+  padding: 0 24px 0 16px;
+  min-width: 96px;
+  font-size: 16px;
+  gap: 10px;
+}
+.compose-btn i {
+  font-size: 18px;
+}
+.compose-btn:hover {
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3),
+    0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  background-color: #c2e7ff;
+}
+.sidebar-list {
+  padding-right: 12px;
+}
+.sidebar-item {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 26px;
+  padding: 0 8px 0 26px;
+}
+.sidebar-item:hover {
+  background-color: rgb(252, 232, 230);
+}
+.sidebar-item.active {
+  background-color: #d3e3fd;
+}
+.sidebar-item-title {
+  color: rgb(32, 33, 36);
+}
+.sidebar-item.active .sidebar-item-title {
+  color: var(--txt-clr);
+  font-weight: 700;
+}
+.side-icon {
+  margin-right: 18px;
+}
+
+/* Mail Card  */
+.mail-card-header {
+  height: 45px;
+}
+
+.mail-card {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  overflow-y: hidden;
+}
+.mail-container {
+  overflow: scroll;
+}
+.mail-container::-webkit-scrollbar {
+  width: 10px;
+}
+.mail-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mail-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.mail-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.mail-container .nav {
+  border-bottom: 0px;
+}
+.mail-container .nav button {
+  border-inline: none;
+  border-top: none;
+  width: 100%;
+}
+.mail-container .nav-item {
+  width: 250px;
+}
+.mail-container .nav button.active {
+  border-bottom: 3px solid #0b57d0;
+}
+.main-mail-table tr {
+  box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.12);
+  padding-block: 4px;
+}
+.main-mail-table tr:hover {
+  box-shadow: inset 1px 0 0 rgb(218, 220, 224),
+    inset -1px 0 0 rgb(218, 220, 224), 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+.mail-title {
+  flex-basis: 168px;
+  max-width: 168px;
+  padding-left: 0;
+  padding-right: 32px;
+}
+.mail-message {
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+.mail-time {
+  width: 56px;
+}
+tr.read {
+  background: #f2f6fc;
+  color: rgb(32, 33, 36);
+}
